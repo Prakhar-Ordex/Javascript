@@ -1,17 +1,23 @@
-typeof undefined // "undefined"
+// let john = {
+//     name: "John",
+//     sayHi: function() {
+//       console.log("Hi buddy!");
+//     }
+//   };
+  
+// john.sayHi(); // Hi buddy!
+  
+// let str = "Hello";
 
-typeof 0 // "number"
+// console.log(str.toUpperCase());
 
-typeof 10n // "bigint"
+// let n = 1.23456;
 
-typeof true // "boolean"
+// console.log(n.toFixed(2));
+// "use strict";
 
-typeof "foo" // "string"
+let str = "Hello";
 
-typeof Symbol("id") // "symbol"
+str.test = 5; // (*)
 
-typeof Math // "object"  (1)
-
-typeof null // "object"  (2)
-
-typeof alert // "function"  (3)
+console.log(str.test);
