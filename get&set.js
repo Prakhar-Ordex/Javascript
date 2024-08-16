@@ -22,8 +22,15 @@
 let obj = {
     name: "John",
     age: 25,
-    getname: function () {
+    get getname () {
         return this.name.toUpperCase();
+    },
+
+    set setname (newName) {
+        this.name = newName.toUpperCase();
     }
+ 
 }
-console.log(obj.getname());
+console.log(obj.getname);
+console.log(obj.setname = "Prakhar")
+console.log(obj)
