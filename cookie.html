@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookie</title>
+</head>
+<body>
+    <h1>cookies,localstorage,session stroge </h1>
+    <script>
+        document.cookie = "name=prakhar"
+        document.cookie = "name2=prakhar"
+        console.log(document.cookie)
+
+        localStorage.setItem("youtube","codehacksbyprakhar");
+        console.log(localStorage.getItem("youtube"))
+        // localStorage.removeItem("youtube") 
+        // localStorage.clear()
+        console.log(localStorage.key(0))
+
+        // seesion storage 
+        sessionStorage.setItem("session_key","session_value")
+        console.log(sessionStorage.getItem("session_key"))
+        // sessionStorage.removeItem("session_key")
+        // sessionStorage.clear()
+       window.onstorage = (e) =>{
+        alert('change session storage' + e)
+       }
+    </script>
+</body>
+</html>
