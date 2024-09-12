@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class ObservarbleArray extends Array{
+        constructor(onPush,...elements){
+            super(...elements);
+            this.onPush = onPush;
+        }
+
+        push(...elements){
+            super.push(...elements);
+            console.log(30)
+
+            if(this.onPush){
+                this.onPush(this);
+            }
+        }
+    }
+
+    const names = new ObservarbleArray(
+        console.log,'John', 'Alice', 'Bob'
+    )
+
+    // console.log(names)
+</script>
+</html>
